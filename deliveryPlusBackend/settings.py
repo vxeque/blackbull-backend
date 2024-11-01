@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-yt_^cx%ju_8er6q_m(a0iygw=dkcdkeb98yggz6imgl^gj9p7h"
+SECRET_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -163,16 +163,17 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
 
-CORS_ALLOWED_ORIGINS = ["exp://192.168.0.7:8081"]
+# IP y puerto del dispositivo que se conecta al backend
+CORS_ALLOWED_ORIGINS = ["exp://localhots:8081"]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 REST_FRAMEWORK = {"DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema"}
 
 # Django settings.py
-# ALLOWED_HOSTS = ['192.168.0.7',]
+# ALLOWED_HOSTS = ['',]
 
 CORS_ORIGIN_WHITELIST = [
-    # 'http://192.168.0.7:19000',
+    # 'http://:19000',
     "127.0.0.1:8000"
 ]
